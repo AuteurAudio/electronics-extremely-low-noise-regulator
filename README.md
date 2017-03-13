@@ -23,9 +23,14 @@ sentiment was the focus of Mike Sulzer's 1980 _Audio Amateur_ article, where the
 to afford a better output.
 
 Over the years there have been a series of better and better variants on the audio regulator.  These have been discussed by many 
-in the field -- people like Mike Sulzer, Erno Borbely, Jan Didden, Walt Jung, Gary Galo and others -- each building on 
-the lessons of the design predecessor.  The focus of this particular regulator is the lowest noise possible.  I will attempt to 
-describe how it is different than some of the more commonly seen modern discreet regulators, and why.
+in the field — people like Mike Sulzer, Erno Borbely, Jan Didden, Walt Jung, Gary Galo and others — each building on 
+the lessons of the design predecessor.  Warren Young has a very nice overview history of the evolution of the discreet 
+regulator entitled [Op-Amp Based Linear Regulators](https://tangentsoft.net/elec/opamp-linreg.html).  
+
+The focus of the regulator used by Lilienfeld's Choir is the lowest noise possible.  I will attempt to describe how it is 
+different than some of the more commonly seen modern discrete regulators, and why.  This regulator, when built properly, will 
+give you a spectral noise on the order of 1.7nv/√Hz, and a voltage stability of better than 100nV over a period of a 
+minute.  For those not aware, that is at least 1000 times better on both figures than your average LM317.
 
 
 
@@ -44,4 +49,19 @@ noise than other configurations.  The regulator appearing in the circuit above o
 transistor.  This has clear limitations, as the sink capacity of the op amp and the gain of the pass transistor set the maximum
 current the regulator can accommodate.  While this works well for the modest current requirements of Lilienfeld's Choir, if your 
 requirements are higher it may be prudent to use a different design.
+
+Like Jung's Super Regulator 2, this regulator makes use of a Zener diode in the sink path of the drive transistor.  I chose a 5.6 volt 
+diode as they tend on average to have the lowest noise.  The most important thing is that the Zener gives the op amp plenty of
+room to develop potential away from the rails.  That is to say, for known input and output voltages, the Zener must be selected to 
+abide the needs of the op amp, and secondarily to abide the desire for quietest junction.  For a reasonable drop of a few volts 
+across the pass transistor Q1, the 5.6 volt Zener is ideal.
+
+The op amp that is used is Linear Technologies LT1128 due to its extremely low noise.  In the feedback controlling the LT1128, 
+the two legs of the circuit attempt to be as simple as possible.  In both cases there is a practical balance that needs to be made
+between selection of low-valued resistors (recall the LT1128 has an input-referred noise that is less than a 50 ohm resistor) and
+realistic choices for decoupling capacitors.  The negative input, which forms the reference, is an LM329 that has a subsequent 
+RC filter.  The critical aspects of this part of the circuit are selecting quality components and reducing capacitor microphonics.
+The positive input, which is where feedback is introduced, is just a voltage divider with decoupling of the top leg
+to facilitate high frequency suppression.  Given the use of fairly low value resistors, large capacitors are used and an emphasis
+on microphonics is a must.  
 
