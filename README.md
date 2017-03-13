@@ -31,3 +31,17 @@ describe how it is different than some of the more commonly seen modern discreet
 
 ## The Circuit
 
+Below is the general circuit:
+
+![Schematic](schematic.png)
+
+The most notable feature of this regulator is the op amp being powered on the regulated side.  This was a great innovation on the 
+part of Walt Jung's [Super Regulator 2](http://waltjung.org/PDFs/Improved_PN_Regs.pdf) compared with its predecessors.  Not only was 
+placement of the op amp an improvement for further reducing power supply coupled noise, but the pass transistor to this day is 
+a fantastic choice for medium-sized regulators.  While this regulator has a very novel feedback mechanism using a green LED as as 
+a high bandgap voltage supply in a constant current circuit driving the main pass transistor, in practice this leads to higher 
+noise than other configurations.  The regulator appearing in the circuit above omits this by directly sinking from the pass 
+transistor.  This has clear limitations, as the sink capacity of the op amp and the gain of the pass transistor set the maximum
+current the regulator can accommodate.  While this works well for the modest current requirements of Lilienfeld's Choir, if your 
+requirements are higher it may be prudent to use a different design.
+
