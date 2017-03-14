@@ -19,7 +19,7 @@ Long ago in the semiconductor world it was commonplace to see discrete regulator
 way.  Like many commonly used things, it made its way to a specialized integrated circuit.  In this case, it was the LM317, released in 
 1976 by National Semiconductor.  Since it solved many problems for many people, it rapidly became a hit.  However, like many 
 products that solve something reasonably well for a lot of people, it didn't solve some problems as well as might be desired.  This
-sentiment was the focus of Mike Sulzer's 1980 _Audio Amateur_ article, where the venerable LM317 was updated using discreet components
+sentiment was the focus of Mike Sulzer's 1980 _Audio Amateur_ article, where the venerable LM317 was updated using discrete components
 to afford a better output.
 
 Over the years there have been a series of better and better variants on the audio regulator.  These have been discussed by many 
