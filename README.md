@@ -50,10 +50,11 @@ transistor.  This has clear limitations, as the sink capacity of the op amp and 
 current the regulator can accommodate.  While this works well for the modest current requirements of Lilienfeld's Choir, if your 
 requirements are higher it may be prudent to use a different design.
 
-Like Jung's Super Regulator 2, this regulator makes use of a Zener diode in the sink path of the drive transistor.  I chose a 5.6 volt 
-diode as they tend on average to have the lowest noise.  The most important thing is that the Zener gives the op amp plenty of
-room to develop potential away from the rails.  That is to say, for known input and output voltages, the Zener must be selected to 
-abide the needs of the op amp, and secondarily to abide the desire for quietest junction.  For a reasonable drop of a few volts 
+Like Jung's Super Regulator 2, this regulator makes use of a Zener diode Z2 in the sink path of the drive transistor.  I chose a 
+5.6 volt diode as they tend on average to have the lowest noise.  The most important thing is that the Zener gives the op amp U1 
+plenty of room to develop potential away from the rails.  That is to say, for known input and output voltages, the Zener 
+must be selected to abide the needs of the op amp, and secondarily to abide the desire for quietest junction.  This is particularly 
+important for many low noise op amps since they often do not have rail-to-rail output.  For a reasonable drop of a few volts 
 across the pass transistor Q1, the 5.6 volt Zener is ideal.  
 
 The op amp U1 that is used is Linear Technologies LT1128 due to its extremely low noise.  In the feedback controlling the LT1128, 
