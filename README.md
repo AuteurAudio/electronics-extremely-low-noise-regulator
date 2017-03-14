@@ -15,8 +15,8 @@ of finesse that is required to do this job well, and there are a lot of ways of 
 scenarios.  Lilienfeld's Choir is an amplifier with nearly constant power requirements, which is an affordance for a regulator 
 having some very good qualities at the expense of flexibility.  
 
-Long ago in the semiconductor world it was commonplace to see discreet regulators.  We all have had a bench supply built this 
-way.  Like many commonly used things, it made its way to a specialized product.  In this case, it was the LM317, released in 
+Long ago in the semiconductor world it was commonplace to see discrete regulators.  We all have had a bench supply built this 
+way.  Like many commonly used things, it made its way to a specialized integrated circuit.  In this case, it was the LM317, released in 
 1976 by National Semiconductor.  Since it solved many problems for many people, it rapidly became a hit.  However, like many 
 products that solve something reasonably well for a lot of people, it didn't solve some problems as well as might be desired.  This
 sentiment was the focus of Mike Sulzer's 1980 _Audio Amateur_ article, where the venerable LM317 was updated using discreet components
