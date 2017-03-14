@@ -56,24 +56,29 @@ room to develop potential away from the rails.  That is to say, for known input 
 abide the needs of the op amp, and secondarily to abide the desire for quietest junction.  For a reasonable drop of a few volts 
 across the pass transistor Q1, the 5.6 volt Zener is ideal.  
 
-The op amp that is used is Linear Technologies LT1128 due to its extremely low noise.  In the feedback controlling the LT1128, 
+The op amp U1 that is used is Linear Technologies LT1128 due to its extremely low noise.  In the feedback controlling the LT1128, 
 the two legs of the circuit attempt to be as simple as possible.  In both cases there is a practical balance that needs to be made
 between selection of low-valued resistors (recall the LT1128 has an input-referred noise that is less than a 50 ohm resistor) and
 realistic choices for decoupling capacitors.  The negative input, which forms the reference, is an LM329 that has a subsequent 
-RC filter.  The critical aspects of this part of the circuit are selecting quality components and reducing capacitor 
-microphonics. The positive input, which is where feedback is introduced, is just a voltage divider with decoupling of the top leg
-to facilitate high frequency suppression.  Given the use of fairly low value resistors, large capacitors are used and an emphasis
-on microphonics is a must.  Another absolute must is the use of a high quality metal foil potentiometer.  You absolutely get what 
-you are paying for, and this is the place where you put it if you need a good quality power supply.
+RC filter.  R4 is effectively the input resistance to U1, as the node of R3, R4 and Z1, which is the LM329, is essentially a 
+constant voltage.  It is advisable to keep the value of R4 under about 400 ohms from a noise perspective.  The critical aspects of 
+this part of the circuit are selecting quality components and reducing capacitor microphonics. The positive input, which 
+is where feedback is introduced, is just a voltage divider with decoupling of the top leg to facilitate high frequency 
+suppression.  R1 parallel with R2 is the input resistance, giving a little more leeway on the capacitor size for C1 than is 
+available for C2.  Given the use of fairly low value resistors, large capacitors are used and an emphasis
+on microphonics is a must.  Do not forget quality snubbers parallel with C1 and C2 for better high frequency 
+performance. Another absolute must is the use of a high quality metal foil potentiometer.  If you are going to any 
+effort at all to make an adjustable supply with low noise, you simply must use the best components.  The two diodes protecting 
+the inputs of U1 are just 1N914 small signal diodes.  
 
 As introduced with the Sulzer-Borbely regulator, the regulator used on Lilienfeld's Choir has a pre-regulator. The LM317 is a 
 great workhorse for this role.  This will keep the input voltage constant and give you more controlled dissipation on the 
 pass transistor.  It is prudent to provide good bypassing to prevent spurious noise entering the main regulator.  It is fairly 
 common to have fairly significant output filter capacitors on a regulator.  In this case it is for two reasons.  First, the 
 normal reasons, providing additional filtering for spurious current draw and decoupling of high frequencies on the output of 
-the regulator.  However, in the case of this regulator, the output is not stable without adequate capacitance.  This would often 
-not be tolerated, but the objective in this case was the lowest possible noise at all cost.  Even if it means using redundant 
-output capacitors to reduce the likelihood of output instability in the face of a component failure.
+the regulator.  Second, in the case of this regulator, the output is not stable without sufficient output capacitance.  This 
+would often not be tolerated in a regulator, but the objective in this case was the lowest possible noise at all cost, even 
+if it means using redundant output capacitors to reduce the likelihood of output instability in the face of a component failure.
 
 Compared to most of the discrete regulators that are commonly used — Sulzer, Borbely and Jung — the regulator used by Lilienfeld's 
 Choir is remarkably simple.  It takes what I perceive to be some of the best features of all of them, sacrificing some of the 
