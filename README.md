@@ -30,7 +30,9 @@ regulator entitled [Op-Amp Based Linear Regulators](https://tangentsoft.net/elec
 The focus of the regulator used by Lilienfeld's Choir is the lowest noise possible.  I will attempt to describe how it is 
 different than some of the more commonly seen modern discrete regulators, and why.  This regulator, when built properly, will 
 give you a spectral noise on the order of 1.7nV/√Hz, and a voltage stability of better than 100nV over a period of a 
-minute.  For those not aware, that is at least 1000 times better on both figures than your average LM317.
+minute.  For those not aware, that is at least 1000 times better on both figures than your average LM317.  You typically find this 
+type of performance on a monolithic regulator designed for low power application, like a LNA on a receiver; the figure 
+stated for this amplifier is for an output into the ampere range and an output voltage in the tens of volts.  Not bad!
 
 
 
