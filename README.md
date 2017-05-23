@@ -85,7 +85,7 @@ if it means using redundant output capacitors to reduce the likelihood of output
 
 Compared to most of the discrete regulators that are commonly used — Sulzer, Borbely and Jung — the regulator used by Lilienfeld's 
 Choir is remarkably simple.  It takes what I perceive to be some of the best features of all of them, sacrificing some of the 
-versatility in exchange for exquisite noise and stability.  The important aspects of making it perform best include choosing the 
-best components and using them properly.  Use metal foil whenever possible, particularly for the potentiometer.  Decouple 
-the electrolytics with a snubber that works impeccably at high frequencies.  Be attentive to component microphonics and set the 
-most critical components in a high quality dissipative material like RTV-162.
+versatility in exchange for an exquisite noise figure and superb DC stability.  The important aspects of making it 
+perform best include choosing the best components and using them properly.  Use metal foil whenever possible, particularly 
+for the potentiometer.  Decouple the electrolytics with a snubber that works impeccably at high frequencies.  Be attentive 
+to component microphonics and set the most critical components in a high quality dissipative material like RTV-162.
